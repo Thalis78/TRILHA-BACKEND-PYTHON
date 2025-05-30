@@ -1,7 +1,7 @@
 def media(n1, n2):
     return (n1 + n2) / 2
 
-def resultadoComIf(mediaFinal):
+def resultado_com_if(mediaFinal):
     if mediaFinal >= 7:
         return "APROVADO"
     elif mediaFinal >= 5:
@@ -9,14 +9,14 @@ def resultadoComIf(mediaFinal):
     else:
         return "REPROVADO"
 
-def resultadoComTernario(mediaFinal):
+def resultado_com_ternario(mediaFinal):
     return (
         "APROVADO" if mediaFinal >= 7
         else "RECUPERAÇÃO" if mediaFinal >= 5
         else "REPROVADO"
     )
 
-def resultadoComSwitch(mediaFinal):
+def resultado_com_switch(mediaFinal):
     match mediaFinal:
         case n if n >= 7:
             return "APROVADO"
@@ -82,8 +82,61 @@ def exemplo_arrays():
     print(nomes[2])
     print(numeros[0])
 
+def exemplo_set():
+    # SET É UMA COLEÇÃO DE ITENS QUE NÃO PODEM SER DUPLICADOS.
+    filmes_set = {"Inception",True,1,8.7}
+    exemplo_set = {"Lincoln","Naty","Lucas"}
+
+    filmes_set.add("Thalisson")
+    filmes_set.update(exemplo_set)
+    filmes_set.remove(1)
+
+    print(len(filmes_set))
+    print(filmes_set)
+
+def exemplo_dicionario():
+    # DICIONARIOS EM PYTHON SÃO SIMILARES A OBJETOS EM JS.
+    # PODENDO SER QUALQUER TIPO IMUTAVEL
+    filmInception = {
+        "TITULO": "SENHOR DOS ANÉIS",
+        "ANO" : 2024
+    }
+
+    filmInception["ANO"] = 2000
+    filmInception["GENERO"] = "FICCAO"
+    print(filmInception)
+    print(filmInception["TITULO"])
+    print(filmInception["ANO"])
+    print(filmInception["GENERO"])
+    print(filmInception.keys())
+    print(filmInception.values())
+    print(filmInception.items())
+
+def list_comprehension():
+    frutas = ['morango', 'banana', 'laranjas']
+
+    frutas_with_a = [fruta for fruta in frutas if 'o' in fruta.lower()]
+    frutas_diferente_de_morango = [fruta for fruta in frutas if fruta.lower() != 'morango']
+    list_numbers = [i for i in range(10) if i < 4] 
+
+    print(frutas_with_a)
+    print(frutas_diferente_de_morango)
+    print(list_numbers)
+
+    print(f"\n======================================\n"
+          f"{frutas}"
+    )
+    while True:
+        escolha_uma_fruta = input("Digite um nome de uma fruta ou vazio para encerrar: ").lower()
+        if escolha_uma_fruta == "":
+            break
+        
+        frutas_escolhidas = [fruta for fruta in frutas if escolha_uma_fruta in fruta.lower()]
+
+        print(f"FRUTAS ENCONTRADAS: {frutas_escolhidas}")
+
 # EU NÃO PRECISO OBRIGATORIAMENTE ESPECIFICAR O TIPO DE EXCEÇÃO EM PYTHON PORÉM ISSO VAI DIFICULTAR O DEBUG.
-def usandoExcecoes():
+def usando_excecoes():
     try:
         numero = int (input("DIGITE UM  NÚMERO?"))
         print(numero)
@@ -93,5 +146,5 @@ def usandoExcecoes():
         print("Programa finalizado!")
 
 def main():
-    exemplo_arrays()
+    list_comprehension()
 main()
