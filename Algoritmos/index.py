@@ -135,6 +135,49 @@ def list_comprehension():
 
         print(f"FRUTAS ENCONTRADAS: {frutas_escolhidas}")
 
+def funcoes_args_kwargs():
+    # ARGS(*) É UTILIZADO QUANDO NÃO TENHO CERTEZA DE QUANTOS ARGUMENTOS IREMOS TER NA FUNÇÃO.
+    # OS ARGUMENTOS SÃO PASSADOS COM UMA TUPLA
+
+    # KWARGS(**) - ALÉM DOS VALORES PODEMOS PASSAR TAMBEM AS RESPECTIVAS CHAVES PARA CADA ARGUMENTO.
+    # OS ARGUMENTOS SÃO PASSADOS COMO DINCIONARIO
+
+    # EXEMPLOS USANDO ARGS:
+    def sum(*num):
+        sum_total = 0;
+        for n in num:
+            sum_total += n
+        
+        print(f"Soma é: {sum_total}\n")
+
+    sum(7,2,3,4,5,6)
+
+    # EXEMPLOS USANDO KWARGS:
+    def apresenta_cursos(**data):
+        for key, value in data.items():
+            print(f"{key} - {value}")
+
+        print()
+
+    print(f"CURSOS DE PROGRAMAÇÃO: \n")
+    apresenta_cursos(name = "JAVA", category = "BACKEND", level = "AVANCADO")
+    apresenta_cursos(name = "JS", category = "FRONTEND", level = "INICIANTE")
+
+def funcoes_lambda():
+    # LAMBDA É COMO SE FOSSE UMA FUNÇÃO ANÔNIMA(FUNÇÃO SEM NOME), SENDO MUITO ÚTIL QUANDO PRECISAMOS CRIAR FUNÇÕES CURTAS E SIMPLES
+
+    # FUNÇÃO NORMAL
+    def soma(x, y):
+        return x + y
+
+    print(soma(2, 3))
+
+    # FUNÇÃO LAMBDA:
+    soma = lambda x, y: x + y
+    print(soma(2, 3)) 
+
+
+
 # EU NÃO PRECISO OBRIGATORIAMENTE ESPECIFICAR O TIPO DE EXCEÇÃO EM PYTHON PORÉM ISSO VAI DIFICULTAR O DEBUG.
 def usando_excecoes():
     try:
@@ -146,5 +189,5 @@ def usando_excecoes():
         print("Programa finalizado!")
 
 def main():
-    list_comprehension()
+    funcoes_lambda()
 main()
