@@ -1,4 +1,4 @@
-from OO.OO_BASICO.Carro import Carro
+from Carro import Carro
 
 class CarroEletrico(Carro):
     def __init__(self, nome, ano, modelo, valor, autonomia):

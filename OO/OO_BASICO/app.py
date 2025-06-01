@@ -1,5 +1,5 @@
-from OO.OO_BASICO.Carro import Carro
-from OO.OO_BASICO.CarroEletrico import CarroEletrico
+from Carro import Carro
+from CarroEletrico import CarroEletrico
 
 def main():
     carro1 = Carro("Fiat", 2020, "Argo", 50000)
@@ -21,4 +21,5 @@ def main():
     print()
     print(tesla.exibir_detalhes())
 
-main()
+if __name__ == "__main__":
+    main() 
