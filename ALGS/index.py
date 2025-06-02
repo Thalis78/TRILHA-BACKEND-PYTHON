@@ -26,6 +26,25 @@ def resultado_com_switch(mediaFinal):
             return "REPROVADO"
 
 def exemplo_loops():
+    # range é uma função que cria uma sequência de números, que pode ser percorrida com o laço for.
+    
+    # Lista numérica:
+    # Exemplos de uso do range com uma, duas e três expressões:
+
+    # range(5)
+    # Apenas um valor é passado: 5 é o valor final (não incluso).
+    # O início é 0 (padrão) e o passo é 1 (padrão).
+    # Resultado: 0, 1, 2, 3, 4
+
+    # range(5, 10)
+    # Dois valores: 5 é o valor inicial, 10 é o valor final (não incluso).
+    # O passo ainda é 1 (padrão).
+    # Resultado: 5, 6, 7, 8, 9
+
+    # range(5, 10, 2)
+    # Três valores: 5 é o início, 10 é o fim (não incluso), e 2 é o passo.
+    # Resultado: 5, 7, 9
+
     for i in range(5):
         print(i + 1)
     
