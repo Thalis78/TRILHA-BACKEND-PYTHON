@@ -84,8 +84,7 @@ def gerar_num(num_inicial,num_final):
     return random.randint(num_inicial,num_final)
 
 def fatorial(num):
-    f = 1;
-    for i in range(num):
+    for i in range(num,0, -1):
         f *= num
     
     return f
