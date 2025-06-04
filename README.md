@@ -30,9 +30,28 @@ Este repositório acompanha a trilha de estudos em backend com Django, onde revi
 
 ---
 
-## 4. Arquitetura Django: MVT vs REST API
+## 4. Tratamento de Exceções em Python
 
-### 4.1 Arquitetura MVT no Django
+### 4.1 Conceito
+
+Exceções são eventos que ocorrem durante a execução do programa e que interrompem seu fluxo normal. O tratamento de exceções permite lidar com erros de forma segura, evitando que o programa quebre inesperadamente.
+
+### 4.2 Sintaxe básica
+
+```
+python:
+
+try:
+    resultado = int("abc")
+except ValueError:
+    print("Erro: valor inválido para conversão.")
+```
+
+---
+
+## 5. Arquitetura Django: MVT vs REST API
+
+### 5.1 Arquitetura MVT no Django
 
 - **MVT**: Model - View - Template
 - Estrutura padrão do Django para aplicações web monolíticas.
@@ -40,30 +59,22 @@ Este repositório acompanha a trilha de estudos em backend com Django, onde revi
 - **View**: Processa requisições, acessa dados e retorna resposta.
 - **Template**: Gera o HTML que será exibido no cliente.
 
-### 4.2 Uso da arquitetura MVT
+### 5.2 Uso da arquitetura MVT
 
 - Ideal para aplicações monolíticas, onde front e back-end estão juntos.
 - A View gera as páginas HTML diretamente.
 
-### 4.3 Separação entre front-end e back-end
+### 5.3 Separação entre front-end e back-end
 
 - Quando front e back são separados, o back funciona como uma REST API.
 - O back envia dados (JSON) e o front consome e renderiza a interface.
 - Django pode atuar apenas como API backend (exemplo: com Django REST Framework).
 
-### 4.4 Resumo
+### 5.4 Resumo
 
 | Arquitetura | Uso típico                      | Front-end                 | Back-end                    |
 | ----------- | ------------------------------- | ------------------------- | --------------------------- |
 | MVT         | Aplicações monolíticas          | Templates Django (HTML)   | Lógica e dados no Django    |
 | REST API    | Sistemas com front-end separado | Framework JS (React, Vue) | API REST no Django ou outra |
-
----
-
-## 5. Próximos passos
-
-- Implementar projetos práticos usando Django MVT
-- Criar APIs REST com Django REST Framework
-- Explorar consumo dessas APIs em front-ends modernos (React, Vue, Angular,NextJS...)
 
 ---
