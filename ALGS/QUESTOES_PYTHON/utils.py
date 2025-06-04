@@ -1,5 +1,6 @@
 import time
 import random
+import math
 
 def input_int(texto):
     try:
@@ -90,3 +91,12 @@ def fatorial(num):
     
     return f
 
+def inverter_string(palavra):
+    palavra_invertida = ""
+    for c in palavra:
+        palavra_invertida = c + palavra_invertida
+    return palavra_invertida
+
+
+def arredondar_pra_baixo(numero):
+    return math.floor(numero)
