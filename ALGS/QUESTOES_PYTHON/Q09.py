@@ -6,4 +6,8 @@ from utils import *
 
 def main():
     num = input_int("Informe o valor de num: ")
-    fatorial(num)
+    print(fatorial(num))
+
+
+if __name__ == "__main__":
+    main()
