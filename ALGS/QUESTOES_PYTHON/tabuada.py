@@ -52,8 +52,7 @@ def limpar_terminal():
 
 
 def main():
-    print("Olá mundo!!")
-
+    resultado_operacao()
 
 if __name__ == "__main__":
-    resultado_operacao()
+    main()
